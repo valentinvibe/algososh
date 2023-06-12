@@ -43,6 +43,7 @@ export const SortingPage: React.FC = () => {
     mode === 'ascending' ? setIsAscending(true) : setIsDescending(true);
     const arr = [...bars];
     let stepCounter = 1;
+
     while (stepCounter !== selectionSortAlgorithm(mode, arr).numberOfSteps) {
       await sortWithDelay(
         selectionSortAlgorithm(mode, arr, stepCounter).resArr
@@ -52,6 +53,7 @@ export const SortingPage: React.FC = () => {
     setInProgress(false);
     mode === 'ascending' ? setIsAscending(false) : setIsDescending(false);
   };
+  
 
   // СОРТИРОВКА ПУЗЫРЬКОМ
   const bubbleSort = async (mode: 'ascending' | 'descending') => {
