@@ -11,7 +11,6 @@ import InputWrapper from "../input-wrapper/input-wrapper";
 import { Input } from "../ui/input/input";
 import { Button } from "../ui/button/button";
 import { Circle } from "../ui/circle/circle";
-import { isDefaultClause } from "typescript";
 
 export const StackPage: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
