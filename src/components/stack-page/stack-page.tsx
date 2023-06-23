@@ -11,7 +11,6 @@ import InputWrapper from "../input-wrapper/input-wrapper";
 import { Input } from "../ui/input/input";
 import { Button } from "../ui/button/button";
 import { Circle } from "../ui/circle/circle";
-import { isDefaultClause } from "typescript";
 
 export const StackPage: React.FC = () => {
   const [inputValue, setInputValue] = useState<string>('');
@@ -88,6 +87,7 @@ export const StackPage: React.FC = () => {
             isLoader={isPushing}
             text="Добавить"
             type="submit"
+            data-cy = "addBtn"
           />
           <Button
             extraClass={styles.deleteBtn}
@@ -95,11 +95,13 @@ export const StackPage: React.FC = () => {
             disabled={!elements.length || isPushing}
             onClick={() => popElement()}
             text="Удалить"
+            data-cy = "delBtn"
           />
           <Button
             disabled={!elements.length || isPushing || isPopping}
             text="Очистить"
             onClick={() => clear()}
+            data-cy = "clearBtn"
           />
         </InputWrapper>
       </form>
