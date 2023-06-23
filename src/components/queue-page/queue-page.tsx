@@ -97,6 +97,7 @@ export const QueuePage: React.FC = () => {
             isLoader={isAdding}
             text="Добавить"
             type="submit"
+            data-cy="addBtn"
           />
           <Button
             extraClass={styles.deleteBtn}
@@ -104,11 +105,13 @@ export const QueuePage: React.FC = () => {
             disabled={isAdding || queue.isEmpty()}
             text="Удалить"
             onClick={() => dequeue()}
+            data-cy="delBtn"
           />
           <Button
             disabled={isAdding || isDeleting || queue.isEmpty()}
             text="Очистить"
             onClick={() => clear()}
+            data-cy="clearBtn"
           />
         </InputWrapper>
       </form>

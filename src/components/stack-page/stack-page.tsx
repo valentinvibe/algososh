@@ -87,6 +87,7 @@ export const StackPage: React.FC = () => {
             isLoader={isPushing}
             text="Добавить"
             type="submit"
+            data-cy = "addBtn"
           />
           <Button
             extraClass={styles.deleteBtn}
@@ -94,11 +95,13 @@ export const StackPage: React.FC = () => {
             disabled={!elements.length || isPushing}
             onClick={() => popElement()}
             text="Удалить"
+            data-cy = "delBtn"
           />
           <Button
             disabled={!elements.length || isPushing || isPopping}
             text="Очистить"
             onClick={() => clear()}
+            data-cy = "clearBtn"
           />
         </InputWrapper>
       </form>

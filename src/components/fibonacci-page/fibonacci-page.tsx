@@ -55,7 +55,7 @@ export const FibonacciPage: React.FC = () => {
           <Button
             disabled={inputValue ? inputValue > maxValue : true}
             isLoader={inProgress}
-            text="Развернуть"
+            text="Рассчитать"
             type="submit"
           />
         </InputWrapper>
